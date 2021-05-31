@@ -317,7 +317,7 @@ body {
   background-color: #6f5a59;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), print {
   .main__block {
     padding-left: 340px;
     height: 180px;
@@ -335,11 +335,17 @@ body {
   width: 120px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), print {
   .main__foto {
     top: 30px;
     left: 60px;
     width: 180px;
+  }
+}
+
+@media print {
+  .main__foto {
+    left: 55px;
   }
 }
 
@@ -349,7 +355,7 @@ body {
   color: #dab0af;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), print {
   .main__title {
     font-size: 55px;
   }
@@ -359,7 +365,7 @@ body {
   font-size: 18px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), print {
   .main__text {
     font-size: 25px;
   }
@@ -375,7 +381,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), print {
   .section {
     max-width: 768px;
     display: -webkit-box;
@@ -435,7 +441,14 @@ body {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media print {
+  .column__right {
+    width: 70%;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px), print {
   .column .section__title {
     margin-top: 0px;
   }
@@ -450,16 +463,29 @@ body {
   }
 }
 
+@media print {
+  .column__left {
+    width: 30%;
+  }
+}
+
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .column__left {
     width: 20%;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), print {
   .column__right {
     width: 70%;
     margin-left: 50px;
+  }
+}
+
+@media print {
+  .column__right {
+    width: 60%;
+    margin-left: 30px;
   }
 }
 
@@ -486,7 +512,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-left: 15px;
-  /* For print only*/
 }
 
 .list__item {
@@ -517,7 +542,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px), print {
   .contacts .list__item,
   .skills .list__item {
     width: calc((100% - 2 * 5px));
