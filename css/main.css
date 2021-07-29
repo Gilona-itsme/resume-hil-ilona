@@ -375,9 +375,9 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .section {
-    max-width: 480px;
+    max-width: 320px;
   }
 }
 
