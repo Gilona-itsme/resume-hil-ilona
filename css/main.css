@@ -375,10 +375,9 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 320px) {
-  .section {
-    max-width: 320px;
-  }
+.section .skills,
+.section .contacts {
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 768px), print {
@@ -391,29 +390,26 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 0 auto 35px;
+    margin: 0 auto 15px;
+  }
+}
+
+.section .skills,
+.section .contacts {
+  margin-top: 15px;
+}
+
+@media print {
+  .section .skills,
+  .section .contacts {
+    margin-top: 10px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .section {
     max-width: 1200px;
-  }
-}
-
-.section .skills,
-.section .contacts {
-  margin-top: 35px;
-}
-
-@media print {
-  .section {
-    margin-bottom: 15px;
-  }
-  .section .skills,
-  .section .contacts,
-  .section .summary {
-    margin-top: 15px;
+    margin-bottom: 25px;
   }
 }
 
@@ -437,8 +433,7 @@ body {
   background-color: #dab0af;
   padding: 8px 20px;
   text-align: start;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 @media print {
@@ -536,6 +531,13 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .projects .list__item {
+    width: calc((100% - 6 * 4px) / 3);
+    margin: 15px 4px 15px 4px;
+  }
+}
+
+@media print {
   .projects .list__item {
     width: calc((100% - 6 * 4px) / 3);
     margin: 4px;
