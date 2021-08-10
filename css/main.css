@@ -316,10 +316,17 @@ body {
   background-color: #6f5a59;
 }
 
-@media screen and (min-width: 768px), print {
+@media screen and (min-width: 768px) {
   .main__block {
     padding-left: 340px;
     height: 180px;
+  }
+}
+
+@media print {
+  .main__block {
+    padding-left: 340px;
+    height: 130px;
   }
 }
 
@@ -339,7 +346,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px), print {
+@media screen and (min-width: 768px) {
   .main__foto {
     top: 30px;
     left: 60px;
@@ -349,7 +356,9 @@ body {
 
 @media print {
   .main__foto {
+    top: 15px;
     left: 55px;
+    width: 130px;
   }
 }
 
@@ -365,11 +374,19 @@ body {
   }
 }
 
-@media screen and (min-width: 768px), print {
+@media screen and (min-width: 768px) {
   .main__title {
     font-size: 55px;
     padding-top: 20px;
     padding-bottom: 25px;
+  }
+}
+
+@media print {
+  .main__title {
+    font-size: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -387,9 +404,10 @@ body {
 
 .section {
   width: 100%;
+  margin: auto;
 }
 
-@media screen and (min-width: 768px), print {
+@media screen and (min-width: 768px) {
   .section {
     max-width: 768px;
     display: -webkit-box;
@@ -399,7 +417,19 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 0 auto 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media print {
+  .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -429,6 +459,12 @@ body {
   font-size: 18px;
 }
 
+@media print {
+  .section__title {
+    font-size: 12px;
+  }
+}
+
 .column {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -443,19 +479,24 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   text-align: start;
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 
 @media print {
   .column__right {
-    width: 70%;
-    margin-left: 30px;
+    width: 75%;
+    margin-left: 15px;
+  }
+  .column__left {
+    width: 30%;
+    margin-left: 0;
   }
 }
 
 @media screen and (min-width: 768px), print {
   .column .section__title {
-    margin-top: 0px;
+    margin-top: 5px;
   }
   .column__left {
     margin-left: 30px;
@@ -467,12 +508,6 @@ body {
   }
   .column__left .list__item {
     padding-left: 15px;
-  }
-}
-
-@media print {
-  .column__left {
-    width: 30%;
   }
 }
 
@@ -497,7 +532,6 @@ body {
 
 @media print {
   .column__right {
-    width: 60%;
     margin-left: 30px;
   }
 }
@@ -505,14 +539,6 @@ body {
 .summary .section__text {
   padding: 5px 15px;
   text-align: justify;
-}
-
-.resume {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .list {
@@ -524,22 +550,20 @@ body {
 }
 
 .list__item {
-  margin-bottom: 8px;
-  margin-top: 8px;
-  padding-right: 45px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 319px) {
   .list__item {
     width: 100%;
-    margin-left: 15px;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .list__item {
-    width: calc((100% - 4 * 4px) / 2);
-    margin-left: 15px;
+    width: calc((100% - 6 * 5px) / 2);
   }
 }
 
@@ -559,8 +583,23 @@ body {
   }
 }
 
+@media print {
+  .hardskills .list__item {
+    width: calc((100% - 6 * 2px) / 3);
+    margin: 2px;
+  }
+}
+
+.experience .list__item {
+  width: 100%;
+}
+
 .experience .list__item::before {
   content: "- ";
+}
+
+.languages .list__item {
+  padding-right: 35px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -572,8 +611,14 @@ body {
 
 @media print {
   .projects .list__item {
-    width: calc((100% - 6 * 4px) / 3);
-    margin: 4px;
+    width: calc((100% - 6 * 2px) / 3);
+    margin: 2px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .experience .list__title {
+    margin-left: 15px;
   }
 }
 
@@ -608,6 +653,12 @@ body {
   margin-bottom: 5px;
   margin-right: 10px;
   font-size: smaller;
+}
+
+@media screen and (max-width: 767px) {
+  .list__text {
+    margin-left: 15px;
+  }
 }
 
 .list__date {
