@@ -305,15 +305,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   color: #a5a2a2;
 }
 
 .main__block {
-  width: 100%;
   height: 135px;
   padding-left: 170px;
   font-size: 35px;
+  width: 100%;
   background-color: #6f5a59;
 }
 
@@ -326,13 +325,18 @@ body {
 
 .main__foto {
   position: absolute;
-  top: 10px;
-  left: 20px;
   border: 5px solid #ffffff;
   -webkit-box-shadow: 0px 0px 10px 2px #dab0af;
           box-shadow: 0px 0px 10px 2px #dab0af;
   z-index: 100;
-  width: 120px;
+}
+
+@media screen and (max-width: 767px) {
+  .main__foto {
+    top: 10px;
+    left: 20px;
+    width: 120px;
+  }
 }
 
 @media screen and (min-width: 768px), print {
@@ -350,19 +354,29 @@ body {
 }
 
 .main__title {
-  padding: 20px 0 15px 0;
-  font-size: 35px;
   color: #dab0af;
+}
+
+@media screen and (max-width: 767px) {
+  .main__title {
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 768px), print {
   .main__title {
     font-size: 55px;
+    padding-top: 20px;
+    padding-bottom: 25px;
   }
 }
 
-.main__text {
-  font-size: 18px;
+@media screen and (max-width: 767px) {
+  .main__text {
+    font-size: 15px;
+  }
 }
 
 @media screen and (min-width: 768px), print {
@@ -373,11 +387,6 @@ body {
 
 .section {
   width: 100%;
-}
-
-.section .skills,
-.section .contacts {
-  margin-top: 10px;
 }
 
 @media screen and (min-width: 768px), print {
@@ -414,7 +423,6 @@ body {
 }
 
 .section__title {
-  text-align: center;
   color: #ffffff;
   padding-bottom: 8px;
   text-transform: uppercase;
@@ -431,7 +439,9 @@ body {
 
 .column .section__title {
   background-color: #dab0af;
-  padding: 8px 20px;
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: start;
   margin-bottom: 8px;
 }
@@ -453,14 +463,22 @@ body {
     padding-top: 110px;
     z-index: 10;
     background-color: #dab0af;
-    width: calc(40%);
     /* for print hidden media */
+  }
+  .column__left .list__item {
+    padding-left: 15px;
   }
 }
 
 @media print {
   .column__left {
     width: 30%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .column__left {
+    width: 40%;
   }
 }
 
@@ -503,15 +521,26 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 15px;
 }
 
 .list__item {
-  width: calc((100%) / 2);
   margin-bottom: 8px;
+  margin-top: 8px;
+  padding-right: 45px;
+}
+
+@media screen and (max-width: 319px) {
+  .list__item {
+    width: 100%;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .list__item {
+    width: calc((100% - 4 * 4px) / 2);
+    margin-left: 15px;
+  }
 }
 
 .hardskills .list__item {
@@ -528,6 +557,10 @@ body {
     width: calc((100% - 6 * 4px) / 3);
     margin: 4px;
   }
+}
+
+.experience .list__item::before {
+  content: "- ";
 }
 
 @media screen and (min-width: 1200px) {
@@ -573,6 +606,7 @@ body {
 .list__text {
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-right: 10px;
   font-size: smaller;
 }
 
